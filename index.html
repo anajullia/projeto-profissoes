@@ -6,24 +6,934 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="imagens/home.png" type="image/x-icon">
     <title>Ciências Exatas e da Terra</title>
 </head>
 <body>
+    <div class="wrapper">
+        <nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top" style="height: 5%;">
+            <div class="container-fluid">
+                <a class="navbar-brand pt-2" id="texto_navbar" href="/">Ciências Exatas e da Terra</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarRightAlignExample"
+                    aria-controls="navbarRightAlignExample"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
 
-    <section class="header">
-        <img class="atomo" src="imagens/home.png">
-        <p class="titulo">Ciências exatas e <br> da terra</p>
-        <p class="subtitulo">A área de Ciências Exatas e da Terra envolve carreiras<br>que têm como suas principais características o uso do<br>cálculo e da lógica.</p>
-    </section>
-    <section class="cursos">
-        <p class="titulocursos">Cursos</p>
-        <div class="cards">
-            <div class="cardum margincards"></div>
-            <div class="carddois margincards"></div>
-            <div class="cardtres margincards"></div>
-        </div>
-    </section>
+                <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" id="texto_navbar" href="#home">
+                                <span class="bi bi-house-door">Home</span>
+                            </a>
+                        </li>
+
+                        <!-- Navbar dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" id="texto_navbar" href="#cursos" role="button" data-bs-toggle="dropdown">
+                              <span class="bi bi-book">Cursos</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Curso 1</a></li>
+                              <li><a class="dropdown-item" href="#">Curso 2</a></li>
+                              <li><a class="dropdown-item" href="#">Curso 3</a></li>
+                              <li><a class="dropdown-item" href="#">Curso 4</a></li>
+                              <li><a class="dropdown-item" href="#">Curso 5</a></li>
+                              <li><a class="dropdown-item" href="#">Curso 6</a></li>
+                            </ul>
+                          </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="texto_navbar" href="#equipe">
+                                <span class="bi bi-people">Equipe</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="header">
+            <img class="atomo" src="imagens/home.png">
+            <p class="titulo">Ciências exatas e <br> da terra</p>
+            <p class="subtitulo">A área de Ciências Exatas e da Terra envolve carreiras<br>que têm como suas principais características o uso do<br>cálculo e da lógica.</p>
+        </section>
+
+        <section class="container mt-5">
+            <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Cursos <span style="color: #74B4FF;">•</span></h1>
+        </section>
+
+        <!--carrossel-->
+        <div class="container mt-5 absolute">
+            <div id="demo" class="carrossel carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+                </div>
     
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="imagens/1.png" alt="Primeira imagem" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Biotecnologia</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odit iure deserunt accusamus possimus! Quis similique temporibus beatae, voluptas cum, deleniti accusantium quam quaerat laborum maxime, eius itaque iste sint!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="imagens/2.png" alt="Segunda imagem" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ciência da Computação</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odit iure deserunt accusamus possimus! Quis similique temporibus beatae, voluptas cum, deleniti accusantium quam quaerat laborum maxime, eius itaque iste sint!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="imagens/3.png" alt="Terceira imagem" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Matemática</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odit iure deserunt accusamus possimus! Quis similique temporibus beatae, voluptas cum, deleniti accusantium quam quaerat laborum maxime, eius itaque iste sint!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="imagens/4.png" alt="Terceira imagem" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Química</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odit iure deserunt accusamus possimus! Quis similique temporibus beatae, voluptas cum, deleniti accusantium quam quaerat laborum maxime, eius itaque iste sint!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="imagens/5.png" alt="Terceira imagem" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Física</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odit iure deserunt accusamus possimus! Quis similique temporibus beatae, voluptas cum, deleniti accusantium quam quaerat laborum maxime, eius itaque iste sint!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item rounded">
+                        <img src="imagens/6.png" alt="Terceira imagem" class="d-block w-100">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Geologia</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex odit iure deserunt accusamus possimus! Quis similique temporibus beatae, voluptas cum, deleniti accusantium quam quaerat laborum maxime, eius itaque iste sint!</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+        <!--carrossel-->
+
+        <br>
+
+        <div class="container-fluid">
+            <section class="container mt-5">
+                <section class="container mt-5">
+                <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: left;"><span style="color: #74B4FF;">→</span>Biotecnologia</h1>    
+                </section>
+                <section class="container mt-5">
+                    <p style="width: 100%; margin-left: 0;" class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui. Nulla eu nunc massa. Duis eu nunc condimentum, facilisis est sit amet, mollis ante. Duis vulputate eros ac dolor pharetra, nec finibus lorem congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tellus ex, faucibus ut tincidunt non, euismod ac ligula. Proin quis volutpat nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </section>
+               
+                <section class="container mt-5 botoesinfo">
+                </section>
+                <div class="quadradoinfo">
+                    
+                </div>
+    
+                <section>
+                    <p class="texto"><strong>Atuação:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Salário:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Perfil do aluno:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <center>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Graduação</a>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Pós-Graduação</a>
+                    </center>
+                </section>
+            </section>
+            <br><br><br>
+            <section class="container mt-5">
+                <h1 class="t-6 margintop" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Grade curricular <span style="color: #74B4FF;">•</span></h1>
+                <table class="table table-striped margintable mt-5">
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+    
+            <section>
+            <section class="container mt-5">
+                <section class="container mt-5">
+                    <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Principais Faculdades <span style="color: #74B4FF;">•</span></h1>    
+                </section>
+            </section>
+                <section class="container mt-5">
+                  <div class="row">
+                    <!-- First card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/usp.png" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade de São Paulo (USP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/unicamp.jpg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Estadual de Campinas (UNICAMP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/ufpr.jpeg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Federal do Paraná (UFPR)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+        </section>
+    </section>
+        </div>
+        
+        <br>
+
+        <!--curso 2-->
+        <div class="container-fluid mt-5 rounded" style="background-color: #D8EAFF;">
+            <section class="container">
+                <section class="container">
+                <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: left;"><span style="color: #74B4FF;">→</span>Ciência da Computação</h1>    
+                </section>
+                <section class="container mt-5">
+                    <p style="width: 100%; margin-left: 0;" class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui. Nulla eu nunc massa. Duis eu nunc condimentum, facilisis est sit amet, mollis ante. Duis vulputate eros ac dolor pharetra, nec finibus lorem congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tellus ex, faucibus ut tincidunt non, euismod ac ligula. Proin quis volutpat nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </section>
+               
+                <section class="container mt-5 botoesinfo">
+                </section>
+                <div class="quadradoinfo">
+                    
+                </div>
+    
+                <section>
+                    <p class="texto"><strong>Atuação:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Salário:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Perfil do aluno:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <center>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Graduação</a>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Pós-Graduação</a>
+                    </center>
+                </section>
+            </section>
+            <br><br><br>
+            <section class="container mt-5">
+                <h1 class="t-6 margintop" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Grade curricular <span style="color: #74B4FF;">•</span></h1>
+                <table class="table table-striped margintable mt-5">
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+    
+            <section>
+            <section class="container mt-5">
+                <section class="container mt-5">
+                    <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Principais Faculdades <span style="color: #74B4FF;">•</span></h1>    
+                </section>
+            </section>
+                <section class="container mt-5">
+                  <div class="row">
+                    <!-- First card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/usp.png" alt="Card image">
+                            <div class="card-body" style="background-color: #ffffff;">
+                                <h4 class="card-title">Universidade de São Paulo (USP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/unicamp.jpg" alt="Card image">
+                            <div class="card-body" style="background-color: #ffffff;">
+                                <h4 class="card-title">Universidade Estadual de Campinas (UNICAMP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/ufpr.jpeg" alt="Card image">
+                            <div class="card-body" style="background-color: #ffffff;">
+                                <h4 class="card-title">Universidade Federal do Paraná (UFPR)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+        </section>
+    </section>
+        </div>
+
+        <br>
+
+        <!--curso 3-->
+        <div class="container-fluid">
+            <section class="container mt-5">
+                <section class="container mt-5">
+                <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: left;"><span style="color: #74B4FF;">→</span>Matemática</h1>    
+                </section>
+                <section class="container mt-5">
+                    <p style="width: 100%; margin-left: 0;" class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui. Nulla eu nunc massa. Duis eu nunc condimentum, facilisis est sit amet, mollis ante. Duis vulputate eros ac dolor pharetra, nec finibus lorem congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tellus ex, faucibus ut tincidunt non, euismod ac ligula. Proin quis volutpat nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </section>
+               
+                <section class="container mt-5 botoesinfo">
+                </section>
+                <div class="quadradoinfo">
+                    
+                </div>
+    
+                <section>
+                    <p class="texto"><strong>Atuação:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Salário:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Perfil do aluno:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <center>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Graduação</a>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Pós-Graduação</a>
+                    </center>
+                </section>
+            </section>
+            <br><br><br>
+            <section class="container mt-5">
+                <h1 class="t-6 margintop" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Grade curricular <span style="color: #74B4FF;">•</span></h1>
+                <table class="table table-striped margintable mt-5">
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+    
+            <section>
+            <section class="container mt-5">
+                <section class="container mt-5">
+                    <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Principais Faculdades <span style="color: #74B4FF;">•</span></h1>    
+                </section>
+            </section>
+                <section class="container mt-5">
+                  <div class="row">
+                    <!-- First card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/usp.png" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade de São Paulo (USP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/unicamp.jpg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Estadual de Campinas (UNICAMP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/ufpr.jpeg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Federal do Paraná (UFPR)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+        </section>
+    </section>
+        </div>
+        
+        <br>
+
+        <!--curso 4-->
+
+        <div class="container-fluid">
+            <section class="container mt-5">
+                <section class="container mt-5">
+                <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: left;"><span style="color: #74B4FF;">→</span>Química</h1>    
+                </section>
+                <section class="container mt-5">
+                    <p style="width: 100%; margin-left: 0;" class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui. Nulla eu nunc massa. Duis eu nunc condimentum, facilisis est sit amet, mollis ante. Duis vulputate eros ac dolor pharetra, nec finibus lorem congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tellus ex, faucibus ut tincidunt non, euismod ac ligula. Proin quis volutpat nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </section>
+               
+                <section class="container mt-5 botoesinfo">
+                </section>
+                <div class="quadradoinfo">
+                    
+                </div>
+    
+                <section>
+                    <p class="texto"><strong>Atuação:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Salário:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Perfil do aluno:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <center>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Graduação</a>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Pós-Graduação</a>
+                    </center>
+                </section>
+            </section>
+            <br><br><br>
+            <section class="container mt-5">
+                <h1 class="t-6 margintop" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Grade curricular <span style="color: #74B4FF;">•</span></h1>
+                <table class="table table-striped margintable mt-5">
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+    
+            <section>
+            <section class="container mt-5">
+                <section class="container mt-5">
+                    <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Principais Faculdades <span style="color: #74B4FF;">•</span></h1>    
+                </section>
+            </section>
+                <section class="container mt-5">
+                  <div class="row">
+                    <!-- First card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/usp.png" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade de São Paulo (USP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/unicamp.jpg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Estadual de Campinas (UNICAMP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/ufpr.jpeg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Federal do Paraná (UFPR)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+        </section>
+    </section>
+        </div>
+        
+        <br>
+
+        <!--curso 5-->
+        <div class="container-fluid mt-5 rounded" style="background-color: #D8EAFF;">
+            <section class="container">
+                <section class="container">
+                <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: left;"><span style="color: #74B4FF;">→</span>Física</h1>    
+                </section>
+                <section class="container mt-5">
+                    <p style="width: 100%; margin-left: 0;" class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui. Nulla eu nunc massa. Duis eu nunc condimentum, facilisis est sit amet, mollis ante. Duis vulputate eros ac dolor pharetra, nec finibus lorem congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tellus ex, faucibus ut tincidunt non, euismod ac ligula. Proin quis volutpat nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </section>
+               
+                <section class="container mt-5 botoesinfo">
+                </section>
+                <div class="quadradoinfo">
+                    
+                </div>
+    
+                <section>
+                    <p class="texto"><strong>Atuação:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Salário:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Perfil do aluno:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <center>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Graduação</a>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Pós-Graduação</a>
+                    </center>
+                </section>
+            </section>
+            <br><br><br>
+            <section class="container mt-5">
+                <h1 class="t-6 margintop" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Grade curricular <span style="color: #74B4FF;">•</span></h1>
+                <table class="table table-striped margintable mt-5">
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+    
+            <section>
+            <section class="container mt-5">
+                <section class="container mt-5">
+                    <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Principais Faculdades <span style="color: #74B4FF;">•</span></h1>    
+                </section>
+            </section>
+                <section class="container mt-5">
+                  <div class="row">
+                    <!-- First card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/usp.png" alt="Card image">
+                            <div class="card-body" style="background-color: #ffffff;">
+                                <h4 class="card-title">Universidade de São Paulo (USP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/unicamp.jpg" alt="Card image">
+                            <div class="card-body" style="background-color: #ffffff;">
+                                <h4 class="card-title">Universidade Estadual de Campinas (UNICAMP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/ufpr.jpeg" alt="Card image">
+                            <div class="card-body" style="background-color: #ffffff;">
+                                <h4 class="card-title">Universidade Federal do Paraná (UFPR)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+        </section>
+    </section>
+        </div>
+
+        <br>
+
+        <!--curso 6-->
+        <div class="container-fluid">
+            <section class="container mt-5">
+                <section class="container mt-5">
+                <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: left;"><span style="color: #74B4FF;">→</span>Geologia</h1>    
+                </section>
+                <section class="container mt-5">
+                    <p style="width: 100%; margin-left: 0;" class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui. Nulla eu nunc massa. Duis eu nunc condimentum, facilisis est sit amet, mollis ante. Duis vulputate eros ac dolor pharetra, nec finibus lorem congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tellus ex, faucibus ut tincidunt non, euismod ac ligula. Proin quis volutpat nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </section>
+               
+                <section class="container mt-5 botoesinfo">
+                </section>
+                <div class="quadradoinfo">
+                    
+                </div>
+    
+                <section>
+                    <p class="texto"><strong>Atuação:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Salário:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                    <p class="texto"><strong>Perfil do aluno:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue ut mi vitae mattis. Proin et vulputate nisl, mattis commodo dui.</p>
+                </section>
+    
+                <section class="mt-5">
+                    <center>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Graduação</a>
+                        <a href="#" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Pós-Graduação</a>
+                    </center>
+                </section>
+            </section>
+            <br><br><br>
+            <section class="container mt-5">
+                <h1 class="t-6 margintop" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Grade curricular <span style="color: #74B4FF;">•</span></h1>
+                <table class="table table-striped margintable mt-5">
+                    <tbody>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"></th>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                        <td>Lorem</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </section>
+    
+            <section>
+            <section class="container mt-5">
+                <section class="container mt-5">
+                    <h1 class="mt-5" style="font-size: 45px; font-weight: 600; color: #000000; text-align: center;"><span style="color: #74B4FF;">•</span> Principais Faculdades <span style="color: #74B4FF;">•</span></h1>    
+                </section>
+            </section>
+                <section class="container mt-5">
+                  <div class="row">
+                    <!-- First card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/usp.png" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade de São Paulo (USP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/unicamp.jpg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Estadual de Campinas (UNICAMP)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img class="card-img-top" src="imagens/ufpr.jpeg" alt="Card image">
+                            <div class="card-body" style="background-color: #D8EAFF;">
+                                <h4 class="card-title">Universidade Federal do Paraná (UFPR)</h4>
+                                <a href="#" class="btn rounded-pill btn-primary mt-4">Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </section>
+            </section>
+        </section>
+    </section>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <!--footer-->
+        <footer class="bg-light text-center text-lg-start">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                  <h5 class="text-uppercase">Ciências Exatas e da Terra</h5>
+          
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                    molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                    aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                  </p>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+              © 2023 Copyright: Gabriela Pereira Lino
+            </div>
+            <!-- Copyright -->
+          </footer>      
+    </div>
 </body>
 </html>
